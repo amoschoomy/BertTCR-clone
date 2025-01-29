@@ -44,27 +44,39 @@ class BertTCR(nn.Module):
         # Handle padding if sequence length is less than expected
         if x.shape[1] < 24:
             padding_size = 24 - x.shape[1]
-            # Pad the sequence dimension (dim=1) with zeros
             x = torch.nn.functional.pad(x, (0, 0, 0, padding_size, 0, 0))
             print(f"Shape after padding: {x.shape}")
         
-        # Reshape the tensor to the expected format
         batch_size = x.shape[0]
-        x = x.permute(0, 2, 1)  # Change to shape [batch_size, 768, sequence_length]
+        x = x.permute(0, 2, 1)
         print(f"Shape after permute: {x.shape}")
         
-        # Continue with the rest of the forward pass
+        # Debug convolution operations
         out = [conv(x) for conv in self.convs]
+        print(f"Shapes after individual convolutions: {[o.shape for o in out]}")
+        
         out = torch.cat(out, dim=1)
+        print(f"Shape after concatenation: {out.shape}")
+        
         out = out.reshape(-1, 1, sum(self.filter_num))
+        print(f"Shape after first reshape: {out.shape}")
+        
         out = self.dropout(self.fc(out))
-        out = out.reshape(-1, self.ins_num)
+        print(f"Shape after FC layer and dropout: {out.shape}")
+        
+        # This is where the error occurs
+        print(f"Total elements before problematic reshape: {out.numel()}")
+        out = torch.nn.functional.pad(out.squeeze(), (0, self.ins_num - out.shape[0])).unsqueeze(0)
+        print(f"Shape after final reshape: {out.shape}")
         
         pred_sum = 0
-        for model in self.models:
+        for i, model in enumerate(self.models):
             pred = self.dropout(model(out))
+            print(f"Shape after model {i}: {pred.shape}")
             pred_sum += pred
+        
         out = self.sigmoid(pred_sum / len(self.models))
+        print(f"Final output shape: {out.shape}")
         
         return out
 
@@ -79,7 +91,7 @@ def create_parser():
         dest="sample_dir",
         type=str,
         help="The directory of samples for prediction.",
-        default="/scratch/project/tcr_ml/BertTCR/THCA_pytorch",
+        default="/scratch/project/tcr_ml/BertTCR/ZERO_embedding",
     )
     parser.add_argument(
         "--model_file",
@@ -135,7 +147,7 @@ def create_parser():
         dest="output",
         type=str,
         help="Output file in .tsv format.",
-        default='./Lung_prediction.tsv',
+        default='./ZERO_prediction.tsv',
     )
     return parser.parse_args()
 
