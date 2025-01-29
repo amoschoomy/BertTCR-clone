@@ -2,34 +2,18 @@
 # encoding: utf-8
 
 from tape import ProteinBertAbstractModel, ProteinBertModel
-from tape.models.modeling_utils import SimpleMLP
-from typing import Union, List, Tuple, Sequence, Dict, Any, Optional, Collection, Mapping
+from typing import Union, Dict
 from pathlib import Path
 from tape.tokenizers import TAPETokenizer
 from tape.datasets import pad_sequences as tape_pad
 from torch.utils.data import Dataset
 import torch
-import torch.nn as nn
-import torch.optim as optim
 import argparse
-from torch.optim.lr_scheduler import ReduceLROnPlateau
-from scipy.special import logit
-from sklearn.isotonic import IsotonicRegression
-from tqdm import tqdm
-import tempfile
-from tape import ProteinBertConfig
 from torch.utils.data import DataLoader
 import pandas as pd
-from copy import deepcopy
 import numpy as np
-from scipy.stats import kendalltau
-from sklearn.metrics import roc_auc_score, average_precision_score
-from torch.optim.lr_scheduler import LambdaLR
 import logging
 import os
-import sys
-import pickle
-import torch.nn.functional as F
 
 logging.basicConfig(format='%(name)s - %(message)s',
                     level=logging.INFO)
@@ -49,10 +33,10 @@ def create_parser():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument('--eval', type=str,
-                        default='./THCA/TestData.tsv',
+                        default='./SampleData/THCA/TestData.tsv',
                         help='evaluation set')
     parser.add_argument('--train', type=str,
-                        default='./THCA/TrainingData.tsv',
+                        default='./SampleData/THCA/TrainingData.tsv',
                         help='training set')
     parser.add_argument('--tcrlen', type=int, default=24,
                         help='tcr length')
@@ -142,8 +126,8 @@ if __name__ == "__main__":
     args = create_parser()
     torch.manual_seed(args.seed)
     args.tcrlen=24 
-    file_path = './TrainingData'##floder name ValidationData\TestData\TrainingData
-    save_path = './TrainingData'
+    file_path = '/scratch/project/tcr_ml/BertTCR/SampleData/Lung/TestData'##floder name ValidationData\TestData\TrainingData
+    save_path = './saved'
     
     # Gets all the file names in the folder and encodes them in sort order
     file_list = sorted(os.listdir(file_path))
@@ -166,5 +150,8 @@ if __name__ == "__main__":
                 input_ids = batch['input_ids'].to(device)
                 input_mask = batch['input_mask'].to(device)
                 outputs = model.forward(input_ids, input_mask)
-                
+                embedding = outputs[0].detach().cpu()
+                embedding_filename = os.path.join(save_path, f"{file_name}_batch_{batch_count}_embedding.pt")
+                torch.save(embedding, embedding_filename)
+
 

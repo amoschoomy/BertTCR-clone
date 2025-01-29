@@ -1,0 +1,1423 @@
+
+Starting BertTCR prediction script...
+
+Arguments:
+sample_dir: /scratch/project/tcr_ml/BertTCR/THCA_pytorch
+model_file: /scratch/project/tcr_ml/BertTCR/TrainedModels/Pretrained_THCA_AUC0.99.pth
+tcr_num: 100
+max_length: 24
+kernel_size: [2, 3, 4]
+filter_num: [3, 2, 1]
+dropout: 0.4
+device: cuda:0
+output: ./Lung_prediction.tsv
+
+Loading model...
+Initializing BertTCR with parameters:
+filter_num: [3, 2, 1]
+kernel_size: [2, 3, 4]
+ins_num: 100
+drop_out: 0.4
+Model loaded successfully
+
+Starting prediction...
+
+Processing sample: Health_047.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.4025333399090801
+Prediction: False
+
+Processing sample: Health_004.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2743163916306111
+Prediction: False
+
+Processing sample: Health_017.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2778691787463452
+Prediction: False
+
+Processing sample: Patient_013.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.38967090102357493
+Prediction: False
+
+Processing sample: Patient_035.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5755800340975876
+Prediction: True
+
+Processing sample: Patient_027.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3511982217144422
+Prediction: False
+
+Processing sample: Health_038.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3286039904646833
+Prediction: False
+
+Processing sample: Patient_003.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 24, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 24, 768])
+Input matrix size: 1843200
+
+Making prediction...
+Original input shape: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.6626053567795006
+Prediction: True
+
+Processing sample: Health_031.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.27279159417195564
+Prediction: False
+
+Processing sample: Health_050.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2729400479735839
+Prediction: False
+
+Processing sample: Health_015.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 24, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 24, 768])
+Input matrix size: 1843200
+
+Making prediction...
+Original input shape: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2967485945016873
+Prediction: False
+
+Processing sample: Health_014.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.27601533107352405
+Prediction: False
+
+Processing sample: Patient_025.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 25, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 25, 768])
+Input matrix size: 1920000
+
+Making prediction...
+Original input shape: torch.Size([100, 25, 768])
+Shape after permute: torch.Size([100, 768, 25])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5537270456668013
+Prediction: True
+
+Processing sample: Health_020.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2775928285785414
+Prediction: False
+
+Processing sample: Health_012.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3387948745162476
+Prediction: False
+
+Processing sample: Patient_032.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2775072664585346
+Prediction: False
+
+Processing sample: Health_024.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2699639206143766
+Prediction: False
+
+Processing sample: Health_051.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2733444626237649
+Prediction: False
+
+Processing sample: Health_008.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.30679067096784274
+Prediction: False
+
+Processing sample: Health_045.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2719403070212879
+Prediction: False
+
+Processing sample: Health_013.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.28970603141085743
+Prediction: False
+
+Processing sample: Health_011.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2782880255473157
+Prediction: False
+
+Processing sample: Health_023.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.26941678590060375
+Prediction: False
+
+Processing sample: Health_006.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2983894971695896
+Prediction: False
+
+Processing sample: Health_036.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.28083599450302177
+Prediction: False
+
+Processing sample: Patient_033.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3500487975951416
+Prediction: False
+
+Processing sample: Patient_037.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.6760095282761897
+Prediction: True
+
+Processing sample: Health_007.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.27992286686075046
+Prediction: False
+
+Processing sample: Patient_009.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3741513100283943
+Prediction: False
+
+Processing sample: Patient_002.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5707978663373474
+Prediction: True
+
+Processing sample: Patient_001.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5095700704461503
+Prediction: True
+
+Processing sample: Health_026.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 24, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 24, 768])
+Input matrix size: 1843200
+
+Making prediction...
+Original input shape: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.27773432435648276
+Prediction: False
+
+Processing sample: Patient_010.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5927340409984753
+Prediction: True
+
+Processing sample: Patient_023.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5073806274010161
+Prediction: True
+
+Processing sample: Health_001.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 25, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 25, 768])
+Input matrix size: 1920000
+
+Making prediction...
+Original input shape: torch.Size([100, 25, 768])
+Shape after permute: torch.Size([100, 768, 25])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3723105892755852
+Prediction: False
+
+Processing sample: Health_029.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2857516498948307
+Prediction: False
+
+Processing sample: Health_019.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.275334158653329
+Prediction: False
+
+Processing sample: Health_044.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 24, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 24, 768])
+Input matrix size: 1843200
+
+Making prediction...
+Original input shape: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.33441336689743256
+Prediction: False
+
+Processing sample: Health_022.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2711832232885549
+Prediction: False
+
+Processing sample: Health_010.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3751995360561002
+Prediction: False
+
+Processing sample: Patient_008.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 24, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 24, 768])
+Input matrix size: 1843200
+
+Making prediction...
+Original input shape: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.6768961800917045
+Prediction: True
+
+Processing sample: Health_030.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.34915072924004203
+Prediction: False
+
+Processing sample: Health_048.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.31130360751772057
+Prediction: False
+
+Processing sample: Health_025.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 24, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 24, 768])
+Input matrix size: 1843200
+
+Making prediction...
+Original input shape: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2777012776052081
+Prediction: False
+
+Processing sample: Patient_015.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.41719397984962053
+Prediction: False
+
+Processing sample: Health_009.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.277257151135645
+Prediction: False
+
+Processing sample: Health_041.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.33822679704266406
+Prediction: False
+
+Processing sample: Patient_005.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3708226062327128
+Prediction: False
+
+Processing sample: Health_049.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.29940965916823653
+Prediction: False
+
+Processing sample: Patient_034.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 25, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 25, 768])
+Input matrix size: 1920000
+
+Making prediction...
+Original input shape: torch.Size([100, 25, 768])
+Shape after permute: torch.Size([100, 768, 25])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.28405718805813746
+Prediction: False
+
+Processing sample: Patient_026.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.29808760716752364
+Prediction: False
+
+Processing sample: Health_042.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.31341945976050567
+Prediction: False
+
+Processing sample: Patient_024.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.647614566946604
+Prediction: True
+
+Processing sample: Patient_019.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.727964684125953
+Prediction: True
+
+Processing sample: Patient_014.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 25, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 25, 768])
+Input matrix size: 1920000
+
+Making prediction...
+Original input shape: torch.Size([100, 25, 768])
+Shape after permute: torch.Size([100, 768, 25])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.7195274872254357
+Prediction: True
+
+Processing sample: Patient_029.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5659833077083535
+Prediction: True
+
+Processing sample: Patient_004.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.4236683443378371
+Prediction: False
+
+Processing sample: Patient_020.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2899305120900252
+Prediction: False
+
+Processing sample: Health_021.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.33174307939523334
+Prediction: False
+
+Processing sample: Patient_012.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 19, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 19, 768])
+Input matrix size: 1459200
+
+Making prediction...
+Original input shape: torch.Size([100, 19, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3670140863528528
+Prediction: False
+
+Processing sample: Health_039.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.28224175768215637
+Prediction: False
+
+Processing sample: Health_034.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.29416388226774454
+Prediction: False
+
+Processing sample: Health_027.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 24, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 24, 768])
+Input matrix size: 1843200
+
+Making prediction...
+Original input shape: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2729021048487894
+Prediction: False
+
+Processing sample: Patient_036.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.4824492497873861
+Prediction: False
+
+Processing sample: Patient_028.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.6421944488573524
+Prediction: True
+
+Processing sample: Patient_006.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.6838136194674763
+Prediction: True
+
+Processing sample: Health_003.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2936402744338138
+Prediction: False
+
+Processing sample: Patient_011.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5460911867202323
+Prediction: True
+
+Processing sample: Health_037.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.28511746474799854
+Prediction: False
+
+Processing sample: Health_018.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2859946502332312
+Prediction: False
+
+Processing sample: Health_043.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2875021329326782
+Prediction: False
+
+Processing sample: Patient_021.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.544323460495278
+Prediction: True
+
+Processing sample: Health_035.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.26980427223541226
+Prediction: False
+
+Processing sample: Health_016.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2722925695567163
+Prediction: False
+
+Processing sample: Health_032.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 23, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 23, 768])
+Input matrix size: 1766400
+
+Making prediction...
+Original input shape: torch.Size([100, 23, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.27149219311943457
+Prediction: False
+
+Processing sample: Health_002.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.28517274567484213
+Prediction: False
+
+Processing sample: Patient_022.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 19, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 19, 768])
+Input matrix size: 1459200
+
+Making prediction...
+Original input shape: torch.Size([100, 19, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5092201955617259
+Prediction: True
+
+Processing sample: Patient_016.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.4116105706072375
+Prediction: False
+
+Processing sample: Health_040.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.29203678784865006
+Prediction: False
+
+Processing sample: Patient_018.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3873946145631622
+Prediction: False
+
+Processing sample: Health_033.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2774326175485984
+Prediction: False
+
+Processing sample: Patient_030.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3135465427883963
+Prediction: False
+
+Processing sample: Health_005.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2690534344444795
+Prediction: False
+
+Processing sample: Patient_031.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.7076185569069462
+Prediction: True
+
+Processing sample: Patient_007.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.364642550051709
+Prediction: False
+
+Processing sample: Patient_017.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.6052751048767503
+Prediction: True
+
+Processing sample: Health_028.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 20, 768])
+Input matrix size: 1536000
+
+Making prediction...
+Original input shape: torch.Size([100, 20, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.29393661478644706
+Prediction: False
+
+Processing sample: Health_046.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.2984418592742647
+Prediction: False
+
+Prediction completed
+The prediction results have been saved to: ./Lung_prediction.tsv

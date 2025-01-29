@@ -11,10 +11,17 @@ import torch.utils.data as Data
 class BertTCR(nn.Module):
     def __init__(self, filter_num, kernel_size, ins_num, drop_out):
         super(BertTCR, self).__init__()
+        print(f"Initializing BertTCR with parameters:")
+        print(f"filter_num: {filter_num}")
+        print(f"kernel_size: {kernel_size}")
+        print(f"ins_num: {ins_num}")
+        print(f"drop_out: {drop_out}")
+        
         self.filter_num = filter_num
         self.kernel_size = kernel_size
         self.ins_num = ins_num
         self.drop_out = drop_out
+        
         self.convs = nn.ModuleList([
             nn.Sequential(nn.Conv1d(in_channels=768,
                                     out_channels=filter_num[idx],
@@ -24,28 +31,41 @@ class BertTCR(nn.Module):
                           nn.AdaptiveMaxPool1d(1))
             for idx, h in enumerate(kernel_size)
         ])
+        
         self.avg_pool = nn.AdaptiveAvgPool1d(1)
         self.fc = nn.Linear(sum(filter_num), 1)
-        #self.fc_1 = nn.Linear(ins_num, 2)  # ins_=100，MIL部分
-        self.models = nn.ModuleList([ nn.Linear(ins_num, 2) for _ in range(5)])
+        self.models = nn.ModuleList([nn.Linear(ins_num, 2) for _ in range(5)])
         self.dropout = nn.Dropout(p=drop_out)
         self.sigmoid = nn.Sigmoid()
+
     def forward(self, x):
-        x = x.reshape(-1, 768, 24)
+        print(f"Original input shape: {x.shape}")
+        
+        # Handle padding if sequence length is less than expected
+        if x.shape[1] < 24:
+            padding_size = 24 - x.shape[1]
+            # Pad the sequence dimension (dim=1) with zeros
+            x = torch.nn.functional.pad(x, (0, 0, 0, padding_size, 0, 0))
+            print(f"Shape after padding: {x.shape}")
+        
+        # Reshape the tensor to the expected format
+        batch_size = x.shape[0]
+        x = x.permute(0, 2, 1)  # Change to shape [batch_size, 768, sequence_length]
+        print(f"Shape after permute: {x.shape}")
+        
+        # Continue with the rest of the forward pass
         out = [conv(x) for conv in self.convs]
-        out = torch.cat(out, dim=1)#在第二个维度进行拼接
+        out = torch.cat(out, dim=1)
         out = out.reshape(-1, 1, sum(self.filter_num))
-        out = self.dropout(self.fc(out))#Dropout 是一种正则化技术，用于随机丢弃一部分神经元的输出，以减少过拟合
+        out = self.dropout(self.fc(out))
         out = out.reshape(-1, self.ins_num)
-        # out = self.dropout(self.fc_1(out))
-        # out = self.sigmoid(out)
-        #  # 使用Bagging方法融合多个模型的预测结果
+        
         pred_sum = 0
         for model in self.models:
             pred = self.dropout(model(out))
             pred_sum += pred
         out = self.sigmoid(pred_sum / len(self.models))
-
+        
         return out
 
 
@@ -59,7 +79,7 @@ def create_parser():
         dest="sample_dir",
         type=str,
         help="The directory of samples for prediction.",
-        default="./Lung/TestData",
+        default="/scratch/project/tcr_ml/BertTCR/THCA_pytorch",
     )
     parser.add_argument(
         "--model_file",
@@ -117,14 +137,20 @@ def create_parser():
         help="Output file in .tsv format.",
         default='./Lung_prediction.tsv',
     )
-    args = parser.parse_args()
-    return args
+    return parser.parse_args()
+
 
 if __name__ == "__main__":
-    # Parse arguments.
+    print("\nStarting BertTCR prediction script...")
+    
+    # Parse arguments
     args = create_parser()
-
-    # Load model.
+    print("\nArguments:")
+    for arg in vars(args):
+        print(f"{arg}: {getattr(args, arg)}")
+    
+    # Load model
+    print("\nLoading model...")
     model = BertTCR(filter_num=args.filter_num,
                      kernel_size=args.kernel_size,
                      ins_num=args.tcr_num,
@@ -132,27 +158,52 @@ if __name__ == "__main__":
 
     model.load_state_dict(torch.load(args.model_file))
     model = model.eval()
+    print("Model loaded successfully")
 
-    # Predict samples.
+    # Predict samples
+    print("\nStarting prediction...")
     sample_dir = args.sample_dir if args.sample_dir[-1] == "/" else args.sample_dir + "/"
+    
     with open(args.output, "w", encoding="utf8") as output_file:
         output_file.write("Sample\tProbability\tPrediction\n")
+        
         for sample_file in os.listdir(sample_dir):
-            # 构造样本文件路径
+            print(f"\nProcessing sample: {sample_file}")
+            
+            # Load sample
             sample_path = os.path.join(sample_dir, sample_file)
-            # Read sample.
             sample = torch.load(sample_path)
-            # 转换为指定设备上的 Tensor
+            print(f"Loaded sample shape: {sample.shape}")
+            print(f"Sample dtype: {sample.dtype}")
+            print(f"Sample device: {sample.device}")
+            
+            # Move to device
             sample = sample.to(torch.device(args.device))
-
-            # Generate input.
+            print(f"Sample moved to device: {sample.device}")
+            
+            # Generate input
             input_matrix = sample
+            print(f"Input matrix shape: {input_matrix.shape}")
+            print(f"Input matrix size: {input_matrix.numel()}")
+            
+            # Make prediction
+            print("\nMaking prediction...")
+            try:
+                predict = model(input_matrix)
+                print(f"Prediction shape: {predict.shape}")
+                
+                prob = float(1 / (1 + math.exp(-predict[0][1] + predict[0][0])))
+                pred = True if prob > 0.5 else False
+                
+                print(f"Probability: {prob}")
+                print(f"Prediction: {pred}")
+                
+                # Save result
+                output_file.write(f"{sample_file}\t{prob}\t{pred}\n")
+                
+            except Exception as e:
+                print(f"Error during prediction: {str(e)}")
+                raise e
 
-            # Make prediction.
-            predict = model(input_matrix)
-            prob = float(1 / (1 + math.exp(-predict[0][1] + predict[0][0])))
-            pred = True if prob > 0.5 else False
-
-            # Save result.
-            output_file.write("{0}\t{1}\t{2}\n".format(sample_file, prob, pred))
+    print("\nPrediction completed")
     print("The prediction results have been saved to: " + args.output)
