@@ -47,8 +47,8 @@ def convert_csv_to_tsv(input_dir, output_dir):
             print(f"Error processing {csv_file}: {str(e)}")
 
 # Specify your input and output directories here
-input_directory = "/scratch/project/tcr_ml/BertTCR/ZERO_raw_csv"
-output_directory = "ZERO_raw_tsv"
+input_directory = "/scratch/project/tcr_ml/BertTCR/seekgene_raw_csv"
+output_directory = "seekgene_raw_tsv"
 
 # Run the conversion
 convert_csv_to_tsv(input_directory, output_directory)

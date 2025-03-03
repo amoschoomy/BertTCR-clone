@@ -91,7 +91,7 @@ def create_parser():
         dest="sample_dir",
         type=str,
         help="The directory of samples for prediction.",
-        default="/scratch/project/tcr_ml/BertTCR/ZERO_embedding",
+        default="/scratch/project/tcr_ml/BertTCR/seekgene_embedding",
     )
     parser.add_argument(
         "--model_file",
