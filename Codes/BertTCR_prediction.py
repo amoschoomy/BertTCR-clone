@@ -55,29 +55,49 @@ class BertTCR(nn.Module):
         out = [conv(x) for conv in self.convs]
         print(f"Shapes after individual convolutions: {[o.shape for o in out]}")
         
+        if not out:  # Check if out is empty
+            print("Error: Convolution output is empty. Skipping computation.")
+            return None
+
         out = torch.cat(out, dim=1)
         print(f"Shape after concatenation: {out.shape}")
-        
+
         out = out.reshape(-1, 1, sum(self.filter_num))
         print(f"Shape after first reshape: {out.shape}")
-        
+
         out = self.dropout(self.fc(out))
         print(f"Shape after FC layer and dropout: {out.shape}")
+
+        if out.numel() == 0:
+            print("Error: Output tensor has no elements. Skipping prediction.")
+            return None
+
+        try:
+            out_squeezed = out.squeeze()
+            print(f"Shape before final padding: {out_squeezed.shape}")
+            
+            # Only pad if out_squeezed is valid
+            if len(out_squeezed.shape) > 0:
+                out = torch.nn.functional.pad(out_squeezed, (0, self.ins_num - out_squeezed.shape[0])).unsqueeze(0)
+            else:
+                print("Warning: Invalid shape, skipping padding.")
+                return None
+            
+            print(f"Shape after final reshape: {out.shape}")
         
-        # This is where the error occurs
-        print(f"Total elements before problematic reshape: {out.numel()}")
-        out = torch.nn.functional.pad(out.squeeze(), (0, self.ins_num - out.shape[0])).unsqueeze(0)
-        print(f"Shape after final reshape: {out.shape}")
-        
+        except Exception as e:
+            print(f"Error during reshaping: {e}")
+            return None
+
         pred_sum = 0
         for i, model in enumerate(self.models):
             pred = self.dropout(model(out))
             print(f"Shape after model {i}: {pred.shape}")
             pred_sum += pred
-        
+
         out = self.sigmoid(pred_sum / len(self.models))
         print(f"Final output shape: {out.shape}")
-        
+
         return out
 
 
@@ -91,7 +111,7 @@ def create_parser():
         dest="sample_dir",
         type=str,
         help="The directory of samples for prediction.",
-        default="/scratch/project/tcr_ml/BertTCR/seekgene_embedding",
+        default="/scratch/project/tcr_ml/BertTCR/sarcoma_embedding",
     )
     parser.add_argument(
         "--model_file",
@@ -202,20 +222,24 @@ if __name__ == "__main__":
             print("\nMaking prediction...")
             try:
                 predict = model(input_matrix)
-                print(f"Prediction shape: {predict.shape}")
+                if predict is None:
+                    print(f"Skipping sample {sample_file} due to invalid model output.")
+                    continue  # Skip this sample
                 
+                print(f"Prediction shape: {predict.shape}")
+
                 prob = float(1 / (1 + math.exp(-predict[0][1] + predict[0][0])))
                 pred = True if prob > 0.5 else False
                 
                 print(f"Probability: {prob}")
                 print(f"Prediction: {pred}")
-                
+
                 # Save result
                 output_file.write(f"{sample_file}\t{prob}\t{pred}\n")
-                
+
             except Exception as e:
                 print(f"Error during prediction: {str(e)}")
-                raise e
+
 
     print("\nPrediction completed")
     print("The prediction results have been saved to: " + args.output)

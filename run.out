@@ -2,7 +2,7 @@
 Starting BertTCR prediction script...
 
 Arguments:
-sample_dir: /scratch/project/tcr_ml/BertTCR/seekgene_embedding
+sample_dir: /scratch/project/tcr_ml/BertTCR/sarcoma_embedding
 model_file: /scratch/project/tcr_ml/BertTCR/TrainedModels/Pretrained_multiple_cancer_detection.pth
 tcr_num: 100
 max_length: 24
@@ -22,35 +22,7 @@ Model loaded successfully
 
 Starting prediction...
 
-Processing sample: S2.tsv_batch_7_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
-
-Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6770586915339731
-Prediction: True
-
-Processing sample: S1.tsv_batch_19_embedding.pt
+Processing sample: TRUST_06-0026_397851_T_R_HMV5MDSX7_TTCATGGTTC-TGACAATGTC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_2_embedding.pt
 Loaded sample shape: torch.Size([100, 20, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -66,7 +38,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -75,26 +47,26 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.6852400756093204
+Probability: 0.5860887443170008
 Prediction: True
 
-Processing sample: S1.tsv_batch_23_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
+Processing sample: TRUST_P008006_340101_HFHFJDSX2_CCGGTTCCTA-CTCGAATATA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([56, 20, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
+Input matrix shape: torch.Size([56, 20, 768])
+Input matrix size: 860160
 
 Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([56, 20, 768])
+Shape after padding: torch.Size([56, 24, 768])
+Shape after permute: torch.Size([56, 768, 24])
+Shapes after individual convolutions: [torch.Size([56, 3, 1]), torch.Size([56, 2, 1]), torch.Size([56, 1, 1])]
+Shape after concatenation: torch.Size([56, 6, 1])
+Shape after first reshape: torch.Size([56, 1, 6])
+Shape after FC layer and dropout: torch.Size([56, 1, 1])
+Shape before final padding: torch.Size([56])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -103,26 +75,26 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.656265118255815
+Probability: 0.6471079985014311
 Prediction: True
 
-Processing sample: S1.tsv_batch_18_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
+Processing sample: TRUST_06-0046_402276_T_R_HWNC7DSX7_AACATCGCGC-ACAAGTGGAC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([34, 20, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
+Input matrix shape: torch.Size([34, 20, 768])
+Input matrix size: 522240
 
 Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([34, 20, 768])
+Shape after padding: torch.Size([34, 24, 768])
+Shape after permute: torch.Size([34, 768, 24])
+Shapes after individual convolutions: [torch.Size([34, 3, 1]), torch.Size([34, 2, 1]), torch.Size([34, 1, 1])]
+Shape after concatenation: torch.Size([34, 6, 1])
+Shape after first reshape: torch.Size([34, 1, 6])
+Shape after FC layer and dropout: torch.Size([34, 1, 1])
+Shape before final padding: torch.Size([34])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -131,766 +103,10 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.5866757029096359
-Prediction: True
-
-Processing sample: S1.tsv_batch_5_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6435165605040665
-Prediction: True
-
-Processing sample: S1.tsv_batch_10_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.7136819443183284
-Prediction: True
-
-Processing sample: S3.tsv_batch_12_embedding.pt
-Loaded sample shape: torch.Size([100, 20, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 20, 768])
-Input matrix size: 1536000
-
-Making prediction...
-Original input shape: torch.Size([100, 20, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.4479106641196029
+Probability: 0.49816444595724724
 Prediction: False
 
-Processing sample: S1.tsv_batch_26_embedding.pt
-Loaded sample shape: torch.Size([100, 20, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 20, 768])
-Input matrix size: 1536000
-
-Making prediction...
-Original input shape: torch.Size([100, 20, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.5707814020501145
-Prediction: True
-
-Processing sample: S3.tsv_batch_16_embedding.pt
-Loaded sample shape: torch.Size([13, 18, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([13, 18, 768])
-Input matrix size: 179712
-
-Making prediction...
-Original input shape: torch.Size([13, 18, 768])
-Shape after padding: torch.Size([13, 24, 768])
-Shape after permute: torch.Size([13, 768, 24])
-Shapes after individual convolutions: [torch.Size([13, 3, 1]), torch.Size([13, 2, 1]), torch.Size([13, 1, 1])]
-Shape after concatenation: torch.Size([13, 6, 1])
-Shape after first reshape: torch.Size([13, 1, 6])
-Shape after FC layer and dropout: torch.Size([13, 1, 1])
-Total elements before problematic reshape: 13
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.49137208580362646
-Prediction: False
-
-Processing sample: S2.tsv_batch_1_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
-
-Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.628463121850948
-Prediction: True
-
-Processing sample: S1.tsv_batch_20_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.5954124596218598
-Prediction: True
-
-Processing sample: S3.tsv_batch_6_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.4824570186138774
-Prediction: False
-
-Processing sample: S3.tsv_batch_3_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.46248758281662516
-Prediction: False
-
-Processing sample: S2.tsv_batch_3_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.7139563331405407
-Prediction: True
-
-Processing sample: S1.tsv_batch_11_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6794834406255386
-Prediction: True
-
-Processing sample: S3.tsv_batch_11_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6024411188810014
-Prediction: True
-
-Processing sample: S1.tsv_batch_17_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.32472849608410326
-Prediction: False
-
-Processing sample: S1.tsv_batch_1_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6702180600055404
-Prediction: True
-
-Processing sample: S3.tsv_batch_2_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6139003943688374
-Prediction: True
-
-Processing sample: S1.tsv_batch_25_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6726507817804486
-Prediction: True
-
-Processing sample: S1.tsv_batch_6_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6312801438967293
-Prediction: True
-
-Processing sample: S2.tsv_batch_9_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6624087822195489
-Prediction: True
-
-Processing sample: S1.tsv_batch_22_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.491522215763386
-Prediction: False
-
-Processing sample: S1.tsv_batch_27_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6434205395320642
-Prediction: True
-
-Processing sample: S1.tsv_batch_24_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6419274697595321
-Prediction: True
-
-Processing sample: S1.tsv_batch_21_embedding.pt
-Loaded sample shape: torch.Size([100, 20, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 20, 768])
-Input matrix size: 1536000
-
-Making prediction...
-Original input shape: torch.Size([100, 20, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6106942648745627
-Prediction: True
-
-Processing sample: S3.tsv_batch_15_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.4685080907401803
-Prediction: False
-
-Processing sample: S1.tsv_batch_15_embedding.pt
-Loaded sample shape: torch.Size([100, 20, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 20, 768])
-Input matrix size: 1536000
-
-Making prediction...
-Original input shape: torch.Size([100, 20, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.649206858389797
-Prediction: True
-
-Processing sample: S1.tsv_batch_14_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6429028371076925
-Prediction: True
-
-Processing sample: S1.tsv_batch_3_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
-
-Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.5125844345108812
-Prediction: True
-
-Processing sample: S1.tsv_batch_9_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
-
-Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.7071757940990027
-Prediction: True
-
-Processing sample: S3.tsv_batch_8_embedding.pt
+Processing sample: TRUST_06-0026_397851_T_R_HMV5MDSX7_TTCATGGTTC-TGACAATGTC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_3_embedding.pt
 Loaded sample shape: torch.Size([100, 24, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -905,7 +121,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -914,66 +130,10 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.6975355073501978
-Prediction: True
+Probability: 0.39626084158732555
+Prediction: False
 
-Processing sample: S2.tsv_batch_12_embedding.pt
-Loaded sample shape: torch.Size([53, 20, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([53, 20, 768])
-Input matrix size: 814080
-
-Making prediction...
-Original input shape: torch.Size([53, 20, 768])
-Shape after padding: torch.Size([53, 24, 768])
-Shape after permute: torch.Size([53, 768, 24])
-Shapes after individual convolutions: [torch.Size([53, 3, 1]), torch.Size([53, 2, 1]), torch.Size([53, 1, 1])]
-Shape after concatenation: torch.Size([53, 6, 1])
-Shape after first reshape: torch.Size([53, 1, 6])
-Shape after FC layer and dropout: torch.Size([53, 1, 1])
-Total elements before problematic reshape: 53
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6112499071823403
-Prediction: True
-
-Processing sample: S1.tsv_batch_4_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
-
-Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.5405860351063856
-Prediction: True
-
-Processing sample: S3.tsv_batch_4_embedding.pt
+Processing sample: TRUST_P007706_336452_HCL7CDRXY_CAGCCGCGTA-CACGGCTAGT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_2_embedding.pt
 Loaded sample shape: torch.Size([100, 20, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -989,7 +149,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -998,10 +158,178 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.7008967715588237
+Probability: 0.5423468829227159
 Prediction: True
 
-Processing sample: S2.tsv_batch_8_embedding.pt
+Processing sample: TRUST_P015206_387396_T_R_H7LMJDSX7_GCAATATTCA-AATTGGCGCC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([25, 19, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([25, 19, 768])
+Input matrix size: 364800
+
+Making prediction...
+Original input shape: torch.Size([25, 19, 768])
+Shape after padding: torch.Size([25, 24, 768])
+Shape after permute: torch.Size([25, 768, 24])
+Shapes after individual convolutions: [torch.Size([25, 3, 1]), torch.Size([25, 2, 1]), torch.Size([25, 1, 1])]
+Shape after concatenation: torch.Size([25, 6, 1])
+Shape after first reshape: torch.Size([25, 1, 6])
+Shape after FC layer and dropout: torch.Size([25, 1, 1])
+Shape before final padding: torch.Size([25])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5775702318171757
+Prediction: True
+
+Processing sample: TRUST_P007006_366644_T_R_HLGLNDSX3_TTCTTAACCA-GGTATGTAGA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([25, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([25, 22, 768])
+Input matrix size: 422400
+
+Making prediction...
+Original input shape: torch.Size([25, 22, 768])
+Shape after padding: torch.Size([25, 24, 768])
+Shape after permute: torch.Size([25, 768, 24])
+Shapes after individual convolutions: [torch.Size([25, 3, 1]), torch.Size([25, 2, 1]), torch.Size([25, 1, 1])]
+Shape after concatenation: torch.Size([25, 6, 1])
+Shape after first reshape: torch.Size([25, 1, 6])
+Shape after FC layer and dropout: torch.Size([25, 1, 1])
+Shape before final padding: torch.Size([25])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5367274235520998
+Prediction: True
+
+Processing sample: TRUST_P013006_377592_T_R_H7HTLDSX5_CTCGCTTCGG-TTGACTAGTA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_2_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
+Shape after concatenation: torch.Size([100, 6, 1])
+Shape after first reshape: torch.Size([100, 1, 6])
+Shape after FC layer and dropout: torch.Size([100, 1, 1])
+Shape before final padding: torch.Size([100])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5333326284240546
+Prediction: True
+
+Processing sample: TRUST_P013306_376781_T_R_H7HKJDSX5_CGTCTCATAT-AGCTACTATA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([44, 19, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([44, 19, 768])
+Input matrix size: 642048
+
+Making prediction...
+Original input shape: torch.Size([44, 19, 768])
+Shape after padding: torch.Size([44, 24, 768])
+Shape after permute: torch.Size([44, 768, 24])
+Shapes after individual convolutions: [torch.Size([44, 3, 1]), torch.Size([44, 2, 1]), torch.Size([44, 1, 1])]
+Shape after concatenation: torch.Size([44, 6, 1])
+Shape after first reshape: torch.Size([44, 1, 6])
+Shape after FC layer and dropout: torch.Size([44, 1, 1])
+Shape before final padding: torch.Size([44])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5568748507888773
+Prediction: True
+
+Processing sample: TRUST_P005706_364760_T_R_HL7JJDSX3_AATGACTGGT-ACGCGTGAGA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_2_embedding.pt
+Loaded sample shape: torch.Size([100, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 21, 768])
+Input matrix size: 1612800
+
+Making prediction...
+Original input shape: torch.Size([100, 21, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
+Shape after concatenation: torch.Size([100, 6, 1])
+Shape after first reshape: torch.Size([100, 1, 6])
+Shape after FC layer and dropout: torch.Size([100, 1, 1])
+Shape before final padding: torch.Size([100])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.33889236583752674
+Prediction: False
+
+Processing sample: TRUST_P010306_356742_T_R_H5F3NDSX3_TTCCTACAGC-AGAATTCGCC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([64, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([64, 22, 768])
+Input matrix size: 1081344
+
+Making prediction...
+Original input shape: torch.Size([64, 22, 768])
+Shape after padding: torch.Size([64, 24, 768])
+Shape after permute: torch.Size([64, 768, 24])
+Shapes after individual convolutions: [torch.Size([64, 3, 1]), torch.Size([64, 2, 1]), torch.Size([64, 1, 1])]
+Shape after concatenation: torch.Size([64, 6, 1])
+Shape after first reshape: torch.Size([64, 1, 6])
+Shape after FC layer and dropout: torch.Size([64, 1, 1])
+Shape before final padding: torch.Size([64])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.632363586523221
+Prediction: True
+
+Processing sample: TRUST_P011706_365421_T_R_HLGFMDSX3_ATTGGCTTCT-CTGCGAGCCA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
 Loaded sample shape: torch.Size([100, 20, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -1017,7 +345,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1026,10 +354,10 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.6598401557676313
-Prediction: True
+Probability: 0.4645197111409392
+Prediction: False
 
-Processing sample: S1.tsv_batch_16_embedding.pt
+Processing sample: TRUST_P013006_377592_T_R_H7HTLDSX5_CTCGCTTCGG-TTGACTAGTA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
 Loaded sample shape: torch.Size([100, 23, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -1045,7 +373,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1054,26 +382,26 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.6424602855230999
+Probability: 0.6422466837099748
 Prediction: True
 
-Processing sample: S3.tsv_batch_13_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
+Processing sample: TRUST_06-0072_407952_T_R_22HGF7LT3_CTTGTACACC-AAGCGCGCTT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([46, 22, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
+Input matrix shape: torch.Size([46, 22, 768])
+Input matrix size: 777216
 
 Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([46, 22, 768])
+Shape after padding: torch.Size([46, 24, 768])
+Shape after permute: torch.Size([46, 768, 24])
+Shapes after individual convolutions: [torch.Size([46, 3, 1]), torch.Size([46, 2, 1]), torch.Size([46, 1, 1])]
+Shape after concatenation: torch.Size([46, 6, 1])
+Shape after first reshape: torch.Size([46, 1, 6])
+Shape after FC layer and dropout: torch.Size([46, 1, 1])
+Shape before final padding: torch.Size([46])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1082,10 +410,38 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.6617837958475623
+Probability: 0.5716117653548723
 Prediction: True
 
-Processing sample: S2.tsv_batch_4_embedding.pt
+Processing sample: TRUST_06-0041_401103_T_R_HVVGTDSX7_GGAGCGTGTA-ACTTACGGAT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([25, 19, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([25, 19, 768])
+Input matrix size: 364800
+
+Making prediction...
+Original input shape: torch.Size([25, 19, 768])
+Shape after padding: torch.Size([25, 24, 768])
+Shape after permute: torch.Size([25, 768, 24])
+Shapes after individual convolutions: [torch.Size([25, 3, 1]), torch.Size([25, 2, 1]), torch.Size([25, 1, 1])]
+Shape after concatenation: torch.Size([25, 6, 1])
+Shape after first reshape: torch.Size([25, 1, 6])
+Shape after FC layer and dropout: torch.Size([25, 1, 1])
+Shape before final padding: torch.Size([25])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5576780496573301
+Prediction: True
+
+Processing sample: TRUST_P007706_336452_HCL7CDRXY_CAGCCGCGTA-CACGGCTAGT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_3_embedding.pt
 Loaded sample shape: torch.Size([100, 21, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -1101,7 +457,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1110,10 +466,204 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.4502780877503447
+Probability: 0.7049953368898122
+Prediction: True
+
+Processing sample: TRUST_P005706_364760_T_R_HL7JJDSX3_AATGACTGGT-ACGCGTGAGA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_4_embedding.pt
+Loaded sample shape: torch.Size([100, 25, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 25, 768])
+Input matrix size: 1920000
+
+Making prediction...
+Original input shape: torch.Size([100, 25, 768])
+Shape after permute: torch.Size([100, 768, 25])
+Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
+Shape after concatenation: torch.Size([100, 6, 1])
+Shape after first reshape: torch.Size([100, 1, 6])
+Shape after FC layer and dropout: torch.Size([100, 1, 1])
+Shape before final padding: torch.Size([100])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5655644068644852
+Prediction: True
+
+Processing sample: TRUST_P004506_365301_T_R_HL3HTDSX3_ACGCCTTGTT-ACGTTCCTTA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([44, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([44, 20, 768])
+Input matrix size: 675840
+
+Making prediction...
+Original input shape: torch.Size([44, 20, 768])
+Shape after padding: torch.Size([44, 24, 768])
+Shape after permute: torch.Size([44, 768, 24])
+Shapes after individual convolutions: [torch.Size([44, 3, 1]), torch.Size([44, 2, 1]), torch.Size([44, 1, 1])]
+Shape after concatenation: torch.Size([44, 6, 1])
+Shape after first reshape: torch.Size([44, 1, 6])
+Shape after FC layer and dropout: torch.Size([44, 1, 1])
+Shape before final padding: torch.Size([44])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5808593669472643
+Prediction: True
+
+Processing sample: TRUST_P000806_363231_T_R_HJNNVDSX3_AGGACAGGCC-AGCTGGAATG_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([34, 19, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([34, 19, 768])
+Input matrix size: 496128
+
+Making prediction...
+Original input shape: torch.Size([34, 19, 768])
+Shape after padding: torch.Size([34, 24, 768])
+Shape after permute: torch.Size([34, 768, 24])
+Shapes after individual convolutions: [torch.Size([34, 3, 1]), torch.Size([34, 2, 1]), torch.Size([34, 1, 1])]
+Shape after concatenation: torch.Size([34, 6, 1])
+Shape after first reshape: torch.Size([34, 1, 6])
+Shape after FC layer and dropout: torch.Size([34, 1, 1])
+Shape before final padding: torch.Size([34])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5777977256688729
+Prediction: True
+
+Processing sample: TRUST_P004906_365215_T_R_HLHWVDSX3_CCACCAGGCA-ATTCCATAAG_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([34, 19, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([34, 19, 768])
+Input matrix size: 496128
+
+Making prediction...
+Original input shape: torch.Size([34, 19, 768])
+Shape after padding: torch.Size([34, 24, 768])
+Shape after permute: torch.Size([34, 768, 24])
+Shapes after individual convolutions: [torch.Size([34, 3, 1]), torch.Size([34, 2, 1]), torch.Size([34, 1, 1])]
+Shape after concatenation: torch.Size([34, 6, 1])
+Shape after first reshape: torch.Size([34, 1, 6])
+Shape after FC layer and dropout: torch.Size([34, 1, 1])
+Shape before final padding: torch.Size([34])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5848676047344303
+Prediction: True
+
+Processing sample: TRUST_P007306_386915_T_R_H7MHFDSX7_CACTCAATTC-CACAACTTAA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([39, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([39, 21, 768])
+Input matrix size: 628992
+
+Making prediction...
+Original input shape: torch.Size([39, 21, 768])
+Shape after padding: torch.Size([39, 24, 768])
+Shape after permute: torch.Size([39, 768, 24])
+Shapes after individual convolutions: [torch.Size([39, 3, 1]), torch.Size([39, 2, 1]), torch.Size([39, 1, 1])]
+Shape after concatenation: torch.Size([39, 6, 1])
+Shape after first reshape: torch.Size([39, 1, 6])
+Shape after FC layer and dropout: torch.Size([39, 1, 1])
+Shape before final padding: torch.Size([39])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5509050386233334
+Prediction: True
+
+Processing sample: TRUST_P005706_364760_T_R_HL7JJDSX3_AATGACTGGT-ACGCGTGAGA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 25, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 25, 768])
+Input matrix size: 1920000
+
+Making prediction...
+Original input shape: torch.Size([100, 25, 768])
+Shape after permute: torch.Size([100, 768, 25])
+Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
+Shape after concatenation: torch.Size([100, 6, 1])
+Shape after first reshape: torch.Size([100, 1, 6])
+Shape after FC layer and dropout: torch.Size([100, 1, 1])
+Shape before final padding: torch.Size([100])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.34332423293619496
 Prediction: False
 
-Processing sample: S3.tsv_batch_7_embedding.pt
+Processing sample: TRUST_06-0030_398371_T_R_HKGNMDSX7_TACGTGAAGG-CTAATAACCG_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([36, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([36, 20, 768])
+Input matrix size: 552960
+
+Making prediction...
+Original input shape: torch.Size([36, 20, 768])
+Shape after padding: torch.Size([36, 24, 768])
+Shape after permute: torch.Size([36, 768, 24])
+Shapes after individual convolutions: [torch.Size([36, 3, 1]), torch.Size([36, 2, 1]), torch.Size([36, 1, 1])]
+Shape after concatenation: torch.Size([36, 6, 1])
+Shape after first reshape: torch.Size([36, 1, 6])
+Shape after FC layer and dropout: torch.Size([36, 1, 1])
+Shape before final padding: torch.Size([36])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.530981406473598
+Prediction: True
+
+Processing sample: TRUST_P007706_336452_HCL7CDRXY_CAGCCGCGTA-CACGGCTAGT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_4_embedding.pt
 Loaded sample shape: torch.Size([100, 21, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -1129,7 +679,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1138,26 +688,26 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.6817737723749766
+Probability: 0.5807479584109556
 Prediction: True
 
-Processing sample: S2.tsv_batch_6_embedding.pt
-Loaded sample shape: torch.Size([100, 20, 768])
+Processing sample: TRUST_P011606_365129_T_R_HLGYTDSX3_GTACCGATTA-AACGTTAGTT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_2_embedding.pt
+Loaded sample shape: torch.Size([27, 20, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 20, 768])
-Input matrix size: 1536000
+Input matrix shape: torch.Size([27, 20, 768])
+Input matrix size: 414720
 
 Making prediction...
-Original input shape: torch.Size([100, 20, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([27, 20, 768])
+Shape after padding: torch.Size([27, 24, 768])
+Shape after permute: torch.Size([27, 768, 24])
+Shapes after individual convolutions: [torch.Size([27, 3, 1]), torch.Size([27, 2, 1]), torch.Size([27, 1, 1])]
+Shape after concatenation: torch.Size([27, 6, 1])
+Shape after first reshape: torch.Size([27, 1, 6])
+Shape after FC layer and dropout: torch.Size([27, 1, 1])
+Shape before final padding: torch.Size([27])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1166,26 +716,26 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.4992228305638083
-Prediction: False
+Probability: 0.555683436075521
+Prediction: True
 
-Processing sample: S3.tsv_batch_1_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
+Processing sample: TRUST_P003106_364414_T_R_HL7JJDSX3_ACTAATCTCC-AGATTAAGTG_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([36, 21, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
+Input matrix shape: torch.Size([36, 21, 768])
+Input matrix size: 580608
 
 Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([36, 21, 768])
+Shape after padding: torch.Size([36, 24, 768])
+Shape after permute: torch.Size([36, 768, 24])
+Shapes after individual convolutions: [torch.Size([36, 3, 1]), torch.Size([36, 2, 1]), torch.Size([36, 1, 1])]
+Shape after concatenation: torch.Size([36, 6, 1])
+Shape after first reshape: torch.Size([36, 1, 6])
+Shape after FC layer and dropout: torch.Size([36, 1, 1])
+Shape before final padding: torch.Size([36])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1194,10 +744,150 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.4329198010779239
+Probability: 0.4602067738442326
 Prediction: False
 
-Processing sample: S3.tsv_batch_5_embedding.pt
+Processing sample: TRUST_06-0054_403751_T_R_HTKHKDSX7_AGAATTCGCC-GAGCTTGCCG_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([32, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([32, 20, 768])
+Input matrix size: 491520
+
+Making prediction...
+Original input shape: torch.Size([32, 20, 768])
+Shape after padding: torch.Size([32, 24, 768])
+Shape after permute: torch.Size([32, 768, 24])
+Shapes after individual convolutions: [torch.Size([32, 3, 1]), torch.Size([32, 2, 1]), torch.Size([32, 1, 1])]
+Shape after concatenation: torch.Size([32, 6, 1])
+Shape after first reshape: torch.Size([32, 1, 6])
+Shape after FC layer and dropout: torch.Size([32, 1, 1])
+Shape before final padding: torch.Size([32])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.4325336562717679
+Prediction: False
+
+Processing sample: TRUST_P013006_377592_T_R_H7HTLDSX5_CTCGCTTCGG-TTGACTAGTA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_3_embedding.pt
+Loaded sample shape: torch.Size([65, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([65, 21, 768])
+Input matrix size: 1048320
+
+Making prediction...
+Original input shape: torch.Size([65, 21, 768])
+Shape after padding: torch.Size([65, 24, 768])
+Shape after permute: torch.Size([65, 768, 24])
+Shapes after individual convolutions: [torch.Size([65, 3, 1]), torch.Size([65, 2, 1]), torch.Size([65, 1, 1])]
+Shape after concatenation: torch.Size([65, 6, 1])
+Shape after first reshape: torch.Size([65, 1, 6])
+Shape after FC layer and dropout: torch.Size([65, 1, 1])
+Shape before final padding: torch.Size([65])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.573684909048001
+Prediction: True
+
+Processing sample: TRUST_P008706_368876_T_R_HVJJLDSX3_CCACGCTGAA-CTGAGGAATA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_2_embedding.pt
+Loaded sample shape: torch.Size([3, 17, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([3, 17, 768])
+Input matrix size: 39168
+
+Making prediction...
+Original input shape: torch.Size([3, 17, 768])
+Shape after padding: torch.Size([3, 24, 768])
+Shape after permute: torch.Size([3, 768, 24])
+Shapes after individual convolutions: [torch.Size([3, 3, 1]), torch.Size([3, 2, 1]), torch.Size([3, 1, 1])]
+Shape after concatenation: torch.Size([3, 6, 1])
+Shape after first reshape: torch.Size([3, 1, 6])
+Shape after FC layer and dropout: torch.Size([3, 1, 1])
+Shape before final padding: torch.Size([3])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.517817125017897
+Prediction: True
+
+Processing sample: TRUST_P012806_374157_T_R_HVWF5DSX3_CTCCACTAAT-AACAAGTACA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([33, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([33, 20, 768])
+Input matrix size: 506880
+
+Making prediction...
+Original input shape: torch.Size([33, 20, 768])
+Shape after padding: torch.Size([33, 24, 768])
+Shape after permute: torch.Size([33, 768, 24])
+Shapes after individual convolutions: [torch.Size([33, 3, 1]), torch.Size([33, 2, 1]), torch.Size([33, 1, 1])]
+Shape after concatenation: torch.Size([33, 6, 1])
+Shape after first reshape: torch.Size([33, 1, 6])
+Shape after FC layer and dropout: torch.Size([33, 1, 1])
+Shape before final padding: torch.Size([33])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5509519990556876
+Prediction: True
+
+Processing sample: TRUST_06-0035_400375_T_R_HVV5KDSX7_CGCAGCAATT-ATAGCGGAAT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([33, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([33, 20, 768])
+Input matrix size: 506880
+
+Making prediction...
+Original input shape: torch.Size([33, 20, 768])
+Shape after padding: torch.Size([33, 24, 768])
+Shape after permute: torch.Size([33, 768, 24])
+Shapes after individual convolutions: [torch.Size([33, 3, 1]), torch.Size([33, 2, 1]), torch.Size([33, 1, 1])]
+Shape after concatenation: torch.Size([33, 6, 1])
+Shape after first reshape: torch.Size([33, 1, 6])
+Shape after FC layer and dropout: torch.Size([33, 1, 1])
+Shape before final padding: torch.Size([33])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5732397607432215
+Prediction: True
+
+Processing sample: TRUST_P007706_336452_HCL7CDRXY_CAGCCGCGTA-CACGGCTAGT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
 Loaded sample shape: torch.Size([100, 21, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -1213,7 +903,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1222,10 +912,38 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.64740005499431
+Probability: 0.5453401000716105
 Prediction: True
 
-Processing sample: S3.tsv_batch_14_embedding.pt
+Processing sample: TRUST_06-0043_401374_T_R_HVVGTDSX7_ACTTCAAGCG-TTCATGGTTC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([93, 20, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([93, 20, 768])
+Input matrix size: 1428480
+
+Making prediction...
+Original input shape: torch.Size([93, 20, 768])
+Shape after padding: torch.Size([93, 24, 768])
+Shape after permute: torch.Size([93, 768, 24])
+Shapes after individual convolutions: [torch.Size([93, 3, 1]), torch.Size([93, 2, 1]), torch.Size([93, 1, 1])]
+Shape after concatenation: torch.Size([93, 6, 1])
+Shape after first reshape: torch.Size([93, 1, 6])
+Shape after FC layer and dropout: torch.Size([93, 1, 1])
+Shape before final padding: torch.Size([93])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.585596655283721
+Prediction: True
+
+Processing sample: TRUST_P008706_368876_T_R_HVJJLDSX3_CCACGCTGAA-CTGAGGAATA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
 Loaded sample shape: torch.Size([100, 22, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -1241,7 +959,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1250,26 +968,25 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.5603200776587914
+Probability: 0.6915802652619893
 Prediction: True
 
-Processing sample: S2.tsv_batch_11_embedding.pt
-Loaded sample shape: torch.Size([100, 21, 768])
+Processing sample: TRUST_06-0026_397851_T_R_HMV5MDSX7_TTCATGGTTC-TGACAATGTC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 25, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 21, 768])
-Input matrix size: 1612800
+Input matrix shape: torch.Size([100, 25, 768])
+Input matrix size: 1920000
 
 Making prediction...
-Original input shape: torch.Size([100, 21, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
+Original input shape: torch.Size([100, 25, 768])
+Shape after permute: torch.Size([100, 768, 25])
 Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1278,25 +995,46 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.5795113570699221
+Probability: 0.5919618866854841
 Prediction: True
 
-Processing sample: S1.tsv_batch_28_embedding.pt
-Loaded sample shape: torch.Size([100, 26, 768])
+Processing sample: TRUST_P005706_364760_T_R_HL7JJDSX3_AATGACTGGT-ACGCGTGAGA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_5_embedding.pt
+Loaded sample shape: torch.Size([1, 19, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 26, 768])
-Input matrix size: 1996800
+Input matrix shape: torch.Size([1, 19, 768])
+Input matrix size: 14592
 
 Making prediction...
-Original input shape: torch.Size([100, 26, 768])
-Shape after permute: torch.Size([100, 768, 26])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([1, 19, 768])
+Shape after padding: torch.Size([1, 24, 768])
+Shape after permute: torch.Size([1, 768, 24])
+Shapes after individual convolutions: [torch.Size([1, 3, 1]), torch.Size([1, 2, 1]), torch.Size([1, 1, 1])]
+Shape after concatenation: torch.Size([1, 6, 1])
+Shape after first reshape: torch.Size([1, 1, 6])
+Shape after FC layer and dropout: torch.Size([1, 1, 1])
+Shape before final padding: torch.Size([])
+Warning: Invalid shape, skipping padding.
+Skipping sample TRUST_P005706_364760_T_R_HL7JJDSX3_AATGACTGGT-ACGCGTGAGA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_5_embedding.pt due to invalid model output.
+
+Processing sample: TRUST_P007706_336452_HCL7CDRXY_CAGCCGCGTA-CACGGCTAGT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_5_embedding.pt
+Loaded sample shape: torch.Size([82, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([82, 22, 768])
+Input matrix size: 1385472
+
+Making prediction...
+Original input shape: torch.Size([82, 22, 768])
+Shape after padding: torch.Size([82, 24, 768])
+Shape after permute: torch.Size([82, 768, 24])
+Shapes after individual convolutions: [torch.Size([82, 3, 1]), torch.Size([82, 2, 1]), torch.Size([82, 1, 1])]
+Shape after concatenation: torch.Size([82, 6, 1])
+Shape after first reshape: torch.Size([82, 1, 6])
+Shape after FC layer and dropout: torch.Size([82, 1, 1])
+Shape before final padding: torch.Size([82])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1305,10 +1043,38 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.7222377083580419
+Probability: 0.5468147161367997
 Prediction: True
 
-Processing sample: S1.tsv_batch_12_embedding.pt
+Processing sample: TRUST_P011706_365421_T_R_HLGFMDSX3_ATTGGCTTCT-CTGCGAGCCA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_2_embedding.pt
+Loaded sample shape: torch.Size([94, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([94, 22, 768])
+Input matrix size: 1588224
+
+Making prediction...
+Original input shape: torch.Size([94, 22, 768])
+Shape after padding: torch.Size([94, 24, 768])
+Shape after permute: torch.Size([94, 768, 24])
+Shapes after individual convolutions: [torch.Size([94, 3, 1]), torch.Size([94, 2, 1]), torch.Size([94, 1, 1])]
+Shape after concatenation: torch.Size([94, 6, 1])
+Shape after first reshape: torch.Size([94, 1, 6])
+Shape after FC layer and dropout: torch.Size([94, 1, 1])
+Shape before final padding: torch.Size([94])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5622390045631935
+Prediction: True
+
+Processing sample: TRUST_P005706_364760_T_R_HL7JJDSX3_AATGACTGGT-ACGCGTGAGA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_3_embedding.pt
 Loaded sample shape: torch.Size([100, 22, 768])
 Sample dtype: torch.float32
 Sample device: cpu
@@ -1324,7 +1090,7 @@ Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100,
 Shape after concatenation: torch.Size([100, 6, 1])
 Shape after first reshape: torch.Size([100, 1, 6])
 Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Shape before final padding: torch.Size([100])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1333,25 +1099,166 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.4201519695237378
+Probability: 0.6422350564747351
+Prediction: True
+
+Processing sample: TRUST_06-0049_402243_T_R_HWNC7DSX7_CTAGTGCTCT-TACTGTTCCA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([52, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([52, 21, 768])
+Input matrix size: 838656
+
+Making prediction...
+Original input shape: torch.Size([52, 21, 768])
+Shape after padding: torch.Size([52, 24, 768])
+Shape after permute: torch.Size([52, 768, 24])
+Shapes after individual convolutions: [torch.Size([52, 3, 1]), torch.Size([52, 2, 1]), torch.Size([52, 1, 1])]
+Shape after concatenation: torch.Size([52, 6, 1])
+Shape after first reshape: torch.Size([52, 1, 6])
+Shape after FC layer and dropout: torch.Size([52, 1, 1])
+Shape before final padding: torch.Size([52])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5583116124206534
+Prediction: True
+
+Processing sample: TRUST_06-0002_389803_T_R_HFFGMDSX7_AATATTGCCA-GGTGTCACCG_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([29, 19, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([29, 19, 768])
+Input matrix size: 423168
+
+Making prediction...
+Original input shape: torch.Size([29, 19, 768])
+Shape after padding: torch.Size([29, 24, 768])
+Shape after permute: torch.Size([29, 768, 24])
+Shapes after individual convolutions: [torch.Size([29, 3, 1]), torch.Size([29, 2, 1]), torch.Size([29, 1, 1])]
+Shape after concatenation: torch.Size([29, 6, 1])
+Shape after first reshape: torch.Size([29, 1, 6])
+Shape after FC layer and dropout: torch.Size([29, 1, 1])
+Shape before final padding: torch.Size([29])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.5284124567357581
+Prediction: True
+
+Processing sample: TRUST_P011606_365129_T_R_HLGYTDSX3_GTACCGATTA-AACGTTAGTT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([100, 22, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([100, 22, 768])
+Input matrix size: 1689600
+
+Making prediction...
+Original input shape: torch.Size([100, 22, 768])
+Shape after padding: torch.Size([100, 24, 768])
+Shape after permute: torch.Size([100, 768, 24])
+Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
+Shape after concatenation: torch.Size([100, 6, 1])
+Shape after first reshape: torch.Size([100, 1, 6])
+Shape after FC layer and dropout: torch.Size([100, 1, 1])
+Shape before final padding: torch.Size([100])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.7074712432210823
+Prediction: True
+
+Processing sample: TRUST_06-0026_397851_T_R_HMV5MDSX7_TTCATGGTTC-TGACAATGTC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_4_embedding.pt
+Loaded sample shape: torch.Size([48, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([48, 21, 768])
+Input matrix size: 774144
+
+Making prediction...
+Original input shape: torch.Size([48, 21, 768])
+Shape after padding: torch.Size([48, 24, 768])
+Shape after permute: torch.Size([48, 768, 24])
+Shapes after individual convolutions: [torch.Size([48, 3, 1]), torch.Size([48, 2, 1]), torch.Size([48, 1, 1])]
+Shape after concatenation: torch.Size([48, 6, 1])
+Shape after first reshape: torch.Size([48, 1, 6])
+Shape after FC layer and dropout: torch.Size([48, 1, 1])
+Shape before final padding: torch.Size([48])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.585839904753758
+Prediction: True
+
+Processing sample: TRUST_06-0006_390382_T_R_HCCJGDSX7_CTGACTCTAC-TGACGGCCGT_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([30, 21, 768])
+Sample dtype: torch.float32
+Sample device: cpu
+Sample moved to device: cuda:0
+Input matrix shape: torch.Size([30, 21, 768])
+Input matrix size: 483840
+
+Making prediction...
+Original input shape: torch.Size([30, 21, 768])
+Shape after padding: torch.Size([30, 24, 768])
+Shape after permute: torch.Size([30, 768, 24])
+Shapes after individual convolutions: [torch.Size([30, 3, 1]), torch.Size([30, 2, 1]), torch.Size([30, 1, 1])]
+Shape after concatenation: torch.Size([30, 6, 1])
+Shape after first reshape: torch.Size([30, 1, 6])
+Shape after FC layer and dropout: torch.Size([30, 1, 1])
+Shape before final padding: torch.Size([30])
+Shape after final reshape: torch.Size([1, 100])
+Shape after model 0: torch.Size([1, 2])
+Shape after model 1: torch.Size([1, 2])
+Shape after model 2: torch.Size([1, 2])
+Shape after model 3: torch.Size([1, 2])
+Shape after model 4: torch.Size([1, 2])
+Final output shape: torch.Size([1, 2])
+Prediction shape: torch.Size([1, 2])
+Probability: 0.3963085341640331
 Prediction: False
 
-Processing sample: S1.tsv_batch_7_embedding.pt
-Loaded sample shape: torch.Size([100, 26, 768])
+Processing sample: TRUST_P006806_366634_T_R_HLGLNDSX3_ATAGTTAGCA-CTACTTAGAG_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([40, 20, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 26, 768])
-Input matrix size: 1996800
+Input matrix shape: torch.Size([40, 20, 768])
+Input matrix size: 614400
 
 Making prediction...
-Original input shape: torch.Size([100, 26, 768])
-Shape after permute: torch.Size([100, 768, 26])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([40, 20, 768])
+Shape after padding: torch.Size([40, 24, 768])
+Shape after permute: torch.Size([40, 768, 24])
+Shapes after individual convolutions: [torch.Size([40, 3, 1]), torch.Size([40, 2, 1]), torch.Size([40, 1, 1])]
+Shape after concatenation: torch.Size([40, 6, 1])
+Shape after first reshape: torch.Size([40, 1, 6])
+Shape after FC layer and dropout: torch.Size([40, 1, 1])
+Shape before final padding: torch.Size([40])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1360,54 +1267,26 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.49415275290501753
-Prediction: False
-
-Processing sample: S2.tsv_batch_2_embedding.pt
-Loaded sample shape: torch.Size([100, 20, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 20, 768])
-Input matrix size: 1536000
-
-Making prediction...
-Original input shape: torch.Size([100, 20, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6252034789412478
+Probability: 0.6764481271412031
 Prediction: True
 
-Processing sample: S3.tsv_batch_10_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
+Processing sample: TRUST_P002906_364422_T_R_HL7JJDSX3_CATTCACGCT-TGAGTACAAC_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([91, 22, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
+Input matrix shape: torch.Size([91, 22, 768])
+Input matrix size: 1537536
 
 Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([91, 22, 768])
+Shape after padding: torch.Size([91, 24, 768])
+Shape after permute: torch.Size([91, 768, 24])
+Shapes after individual convolutions: [torch.Size([91, 3, 1]), torch.Size([91, 2, 1]), torch.Size([91, 1, 1])]
+Shape after concatenation: torch.Size([91, 6, 1])
+Shape after first reshape: torch.Size([91, 1, 6])
+Shape after FC layer and dropout: torch.Size([91, 1, 1])
+Shape before final padding: torch.Size([91])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1416,52 +1295,26 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.300332433598304
-Prediction: False
-
-Processing sample: S1.tsv_batch_29_embedding.pt
-Loaded sample shape: torch.Size([100, 26, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 26, 768])
-Input matrix size: 1996800
-
-Making prediction...
-Original input shape: torch.Size([100, 26, 768])
-Shape after permute: torch.Size([100, 768, 26])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6469459802502184
+Probability: 0.6634641334651559
 Prediction: True
 
-Processing sample: S1.tsv_batch_8_embedding.pt
-Loaded sample shape: torch.Size([100, 26, 768])
+Processing sample: TRUST_06-0051_403159_T_R_H2WV5DSXC_ATTGCGCGGT-GCGGAGCCAA_R1_airr_extracted_trb_frequencies_filtered.tsv_batch_1_embedding.pt
+Loaded sample shape: torch.Size([67, 22, 768])
 Sample dtype: torch.float32
 Sample device: cpu
 Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 26, 768])
-Input matrix size: 1996800
+Input matrix shape: torch.Size([67, 22, 768])
+Input matrix size: 1132032
 
 Making prediction...
-Original input shape: torch.Size([100, 26, 768])
-Shape after permute: torch.Size([100, 768, 26])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
+Original input shape: torch.Size([67, 22, 768])
+Shape after padding: torch.Size([67, 24, 768])
+Shape after permute: torch.Size([67, 768, 24])
+Shapes after individual convolutions: [torch.Size([67, 3, 1]), torch.Size([67, 2, 1]), torch.Size([67, 1, 1])]
+Shape after concatenation: torch.Size([67, 6, 1])
+Shape after first reshape: torch.Size([67, 1, 6])
+Shape after FC layer and dropout: torch.Size([67, 1, 1])
+Shape before final padding: torch.Size([67])
 Shape after final reshape: torch.Size([1, 100])
 Shape after model 0: torch.Size([1, 2])
 Shape after model 1: torch.Size([1, 2])
@@ -1470,175 +1323,7 @@ Shape after model 3: torch.Size([1, 2])
 Shape after model 4: torch.Size([1, 2])
 Final output shape: torch.Size([1, 2])
 Prediction shape: torch.Size([1, 2])
-Probability: 0.39338501152387245
-Prediction: False
-
-Processing sample: S1.tsv_batch_13_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.5217522087448349
-Prediction: True
-
-Processing sample: S1.tsv_batch_30_embedding.pt
-Loaded sample shape: torch.Size([68, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([68, 23, 768])
-Input matrix size: 1201152
-
-Making prediction...
-Original input shape: torch.Size([68, 23, 768])
-Shape after padding: torch.Size([68, 24, 768])
-Shape after permute: torch.Size([68, 768, 24])
-Shapes after individual convolutions: [torch.Size([68, 3, 1]), torch.Size([68, 2, 1]), torch.Size([68, 1, 1])]
-Shape after concatenation: torch.Size([68, 6, 1])
-Shape after first reshape: torch.Size([68, 1, 6])
-Shape after FC layer and dropout: torch.Size([68, 1, 1])
-Total elements before problematic reshape: 68
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.5194163090127577
-Prediction: True
-
-Processing sample: S3.tsv_batch_9_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
-
-Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.7018816255613676
-Prediction: True
-
-Processing sample: S1.tsv_batch_2_embedding.pt
-Loaded sample shape: torch.Size([100, 23, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 23, 768])
-Input matrix size: 1766400
-
-Making prediction...
-Original input shape: torch.Size([100, 23, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.7167228757742032
-Prediction: True
-
-Processing sample: S2.tsv_batch_5_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
-
-Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6995687106500502
-Prediction: True
-
-Processing sample: S2.tsv_batch_10_embedding.pt
-Loaded sample shape: torch.Size([100, 22, 768])
-Sample dtype: torch.float32
-Sample device: cpu
-Sample moved to device: cuda:0
-Input matrix shape: torch.Size([100, 22, 768])
-Input matrix size: 1689600
-
-Making prediction...
-Original input shape: torch.Size([100, 22, 768])
-Shape after padding: torch.Size([100, 24, 768])
-Shape after permute: torch.Size([100, 768, 24])
-Shapes after individual convolutions: [torch.Size([100, 3, 1]), torch.Size([100, 2, 1]), torch.Size([100, 1, 1])]
-Shape after concatenation: torch.Size([100, 6, 1])
-Shape after first reshape: torch.Size([100, 1, 6])
-Shape after FC layer and dropout: torch.Size([100, 1, 1])
-Total elements before problematic reshape: 100
-Shape after final reshape: torch.Size([1, 100])
-Shape after model 0: torch.Size([1, 2])
-Shape after model 1: torch.Size([1, 2])
-Shape after model 2: torch.Size([1, 2])
-Shape after model 3: torch.Size([1, 2])
-Shape after model 4: torch.Size([1, 2])
-Final output shape: torch.Size([1, 2])
-Prediction shape: torch.Size([1, 2])
-Probability: 0.6946135664155922
+Probability: 0.722471233986443
 Prediction: True
 
 Prediction completed

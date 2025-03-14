@@ -126,8 +126,8 @@ if __name__ == "__main__":
     args = create_parser()
     torch.manual_seed(args.seed)
     args.tcrlen=24 
-    file_path = '/scratch/project/tcr_ml/BertTCR/seekgene_raw_tsv'##floder name ValidationData\TestData\TrainingData
-    save_path = './seekgene_embedding'
+    file_path = '/scratch/project/tcr_ml/BertTCR/sarcoma_zero_input'##floder name ValidationData\TestData\TrainingData
+    save_path = './sarcoma_embedding'
     
     os.makedirs(save_path, exist_ok=True)
     # Gets all the file names in the folder and encodes them in sort order
