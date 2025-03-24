@@ -45,7 +45,7 @@ def process_tsv_batches(file_path):
 
 def main():
     # Specify your TSV file path
-    file_path = '/scratch/project/tcr_ml/BertTCR/sarcoma_ZERO_prediction.tsv'
+    file_path = '/scratch/project/tcr_ml/BertTCR/Results/phs002517/phs002517_prediction.tsv'
     
     # Process the file
     results = process_tsv_batches(file_path)
@@ -55,7 +55,7 @@ def main():
         print(results.to_string(index=False))
         
         # Save the results to a CSV file
-        output_file = 'sarcoma_ZERO_merged_batch_results.csv'
+        output_file = 'phs002517_merged_batch_results.csv'
         results.to_csv(output_file, index=False)
         print(f"\nResults saved to: {output_file}")
 

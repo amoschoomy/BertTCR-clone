@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read the CSV file
-df = pd.read_csv('/scratch/project/tcr_ml/BertTCR/sarcoma_ZERO_merged_batch_results.csv')
+df = pd.read_csv('/scratch/project/tcr_ml/BertTCR/Results/phs002517/phs002517_merged_batch_results.csv')
 
 # Create the boxplot
 plt.figure(figsize=(14, 10))

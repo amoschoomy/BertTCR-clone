@@ -167,7 +167,7 @@ def create_parser():
         dest="output",
         type=str,
         help="Output file in .tsv format.",
-        default='./ZERO_prediction.tsv',
+        default='./phs002517_prediction.tsv',
     )
     return parser.parse_args()
 

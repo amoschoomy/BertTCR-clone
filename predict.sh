@@ -16,4 +16,4 @@
 eval "$('/scratch/user/uqachoo1/miniforge3/bin/conda' 'shell.bash' 'hook')"
 conda activate 3.7
 # python ./Codes/BERT_embedding.py
-python ./Codes/BertTCR_prediction.py --model_file /scratch/project/tcr_ml/BertTCR/TrainedModels/Pretrained_multiple_cancer_detection.pth
+python ./Codes/BertTCR_prediction.py --sample_dir /scratch/project/tcr_ml/BertTCR/phs002517_embedding  --model_file /scratch/project/tcr_ml/BertTCR/TrainedModels/Pretrained_multiple_cancer_detection.pth

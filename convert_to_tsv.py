@@ -2,8 +2,8 @@ import pandas as pd
 import os
 
 # Define input and output directories
-INPUT_DIR = "/scratch/project/tcr_ml/iCanTCR/sarcoma_zero_input"
-OUTPUT_DIR = "/scratch/project/tcr_ml/BertTCR/sarcoma_zero_input"
+INPUT_DIR = "/scratch/project/tcr_ml/iCanTCR/phs002517_input"
+OUTPUT_DIR = "/scratch/project/tcr_ml/BertTCR/phs002517_input"
 
 def convert_csv_to_tsv(input_dir, output_dir):
     # Ensure output directory exists
